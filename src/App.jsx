@@ -43,9 +43,10 @@ function App() {
           Your password
         </label>
         <input
-          type="email"
+          type="text"
           className="form-control"
           id="exampleFormControlInput1"
+          title="generated password will be here"
           value={password}
         />
         <div className="d-flex mt-4 gap-4">
