@@ -26,6 +26,7 @@ function App() {
   }, [numberAllowed, charAllowed, length, setPassword]);
 
   const copyToClipBoard = useCallback(() => {
+    passwordRef.current?.select();
     window.navigator.clipboard.writeText(password);
     toast.success("Password Copied");
   }, [password]);
@@ -64,7 +65,7 @@ function App() {
               type="checkbox"
               id="number"
               className=""
-              onChange={() => setNumberAllowed(true)}
+              onChange={() => setNumberAllowed(!numberAllowed)}
             />
             <label htmlFor="number"> Number</label>
           </div>
@@ -73,7 +74,7 @@ function App() {
             <input
               type="checkbox"
               id="character"
-              onChange={() => setCharAllowed(true)}
+              onChange={() => setCharAllowed(!charAllowed)}
             />
             <label htmlFor="character">Character</label>
           </div>
