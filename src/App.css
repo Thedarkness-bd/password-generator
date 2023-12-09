@@ -1,0 +1,17 @@
+html {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 55px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+}
